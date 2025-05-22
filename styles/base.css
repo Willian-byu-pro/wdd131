@@ -80,6 +80,7 @@ main {
 
     /*Faz o grid se organizar em colunas*/
     grid-template-columns: 3fr/*primeira coluna*/ 2fr/*segunda coluna*/; 
+    max-width: 1400px;
 }
 
  .card{
@@ -90,6 +91,7 @@ main {
     margin: 2rem 0.5rem;
     border-radius: 10px; /*arredonda as quinas*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
     
    
 }
