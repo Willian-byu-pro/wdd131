@@ -64,7 +64,7 @@ body{
 
 h1{
     display: grid;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-head);
     color: #ffffffda;
     margin: 0; /*Sem margens*/
     max-width: 1400px; ;/*Expandem ao maximo para melhor parecer um cabeçalho ocupando o maximo a esquerda e direita*/
