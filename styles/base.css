@@ -1,0 +1,179 @@
+:root {
+    --primary-head:#012a4a;
+    --secondary-color:#2c7da0;
+    --header-color: #013a63; 
+    --text-color-principal:#1d1c19;
+    
+    
+}
+
+
+
+/*------ cabeçalho de navegação ------*/
+
+
+
+nav {
+    background-color: var(--header-color);
+    margin: 0; /*Sem margens*/
+    max-width: 1400px; ;/*Expandem ao maximo para melhor parecer um cabeçalho ocupando o maximo a esquerda e direita*/
+    
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;/*Esse comando diz pro navegador:
+                            “Não mostre os pontinhos (•) na frente dos itens da lista.*/
+
+    /*justify-content: center; ---->*/  /*"Center"Faz com que os "a" fiquem centralizidados(justificado ao centro) mas...*/
+
+    justify-content: space-around;/*faz com que ele se centralize ocupando uniformemente o espaço ao redor*/
+   
+}
+
+nav a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem; /*padding é o espaço interno de um elemento, 
+                     ou seja, o "acolchoamento" entre o conteúdo 
+                     e a borda do elemento.*/
+
+    text-decoration: none; /*Esse comando diz pro navegador:
+                             Retire as linhas sublinhadas*/
+}
+
+nav a:hover{/* estilo quando o usuário passa o mouse por cima do link*/
+    border: 1px solid #ffffff4a;
+
+
+}
+
+
+
+
+
+/*---- corpo do site --------*/
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+
+
+}
+
+h1{
+    display: grid;
+    background-color: var(--secondary-color);
+    color: #ffffffda;
+    margin: 0; /*Sem margens*/
+    max-width: 1400px; ;/*Expandem ao maximo para melhor parecer um cabeçalho ocupando o maximo a esquerda e direita*/
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+
+main {
+    display: grid;
+
+    /*Faz o grid se organizar em colunas*/
+    grid-template-columns: 3fr/*primeira coluna*/ 2fr/*segunda coluna*/; 
+}
+
+ .card{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    /*-----3d script------*/
+    padding: 2rem;
+    margin: 2rem 0.5rem;
+    border-radius: 10px; /*arredonda as quinas*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+   
+}
+
+/*
+Este script dá o efeito de transição ao passar o mause sobre as 'sections'
+
+section:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+*/
+
+
+
+
+
+
+/*-------------- imagem------------------*/
+
+section {
+    position: relative;
+    min-height: 200px; /* ou maior se a imagem for alta */
+}
+
+
+
+#willian {
+
+    /*Esses dois comandos só fazem sentido se a imagem tiver uma 
+    posição definida como position: relative, absolute, fixed ou sticky.*/
+    margin-top: 1px;
+    margin-right: 20px;
+
+    float: right;/* Joga a imagem pro canto direito */
+
+    /*--------------------- // -------------------*/
+
+    width: 150px;/*ajusta o tamho necessario*/
+    border-radius: 8px;/*arredonda as quinas*/
+
+    /*Como position: absolute tira a imagem do fluxo normal da página, a <section> não 
+    reconhece a altura dela. Por isso, ela não “cresce” pra envolver a imagem.*/
+    
+}
+
+
+/*------------- div estado ------------*/
+
+#about{
+    font-size: 14px;
+    
+}
+
+#bandeira{
+
+
+    /*Esses dois comandos só fazem sentido se a imagem tiver uma 
+    posição definida como position: relative, absolute, fixed ou sticky.*/
+    margin-top: 1px;
+    margin-right: 20px;
+
+    float: left;/* Joga a imagem pro canto direito */
+
+    /*--------------------- // -------------------*/
+
+    width: 140px;/*ajusta o tamho necessario*/
+    border-radius: 8px;/*arredonda as quinas*/
+
+    /*Como position: absolute tira a imagem do fluxo normal da página, a <section> não 
+    reconhece a altura dela. Por isso, ela não “cresce” pra envolver a imagem.*/
+
+}
+
+
+
+
+
+/*------------footer---------------*/
+
+#LastModified{
+
+    font-size: 10px;
+
+}
+
