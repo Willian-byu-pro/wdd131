@@ -167,6 +167,24 @@ section {
 
 }
 
+#menu{
+     /*Esses dois comandos só fazem sentido se a imagem tiver uma 
+    posição definida como position: relative, absolute, fixed ou sticky.*/
+    margin-top: 0px;
+    margin-right: 0%;
+
+    float: right;/* Joga a imagem pro canto direito */
+
+    /*--------------------- // -------------------*/
+
+    width: 15px;/*ajusta o tamho necessario*/
+    border-radius: 9px;/*arredonda as quinas*/
+
+    /*Como position: absolute tira a imagem do fluxo normal da página, a <section> não 
+    reconhece a altura dela. Por isso, ela não “cresce” pra envolver a imagem.*/
+
+}
+
 
 
 
