@@ -3,10 +3,8 @@
     --secondary-color:#2c7da0;
     --header-color: #013a63; 
     --text-color-principal:#1d1c19;
-    
-    
+      
 }
-
 
 
 /*------ cabeçalho de navegação ------*/
@@ -58,7 +56,6 @@ nav a:hover{/* estilo quando o usuário passa o mouse por cima do link*/
 body{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-
 
 }
 

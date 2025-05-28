@@ -1,0 +1,26 @@
+
+
+
+
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ffffff;
+    background-color: rgba(10, 138, 218, 0.429);
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    
+   
+}
+
+section{
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
