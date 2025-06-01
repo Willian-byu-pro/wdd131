@@ -1,0 +1,41 @@
+
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+  /* Fotos ficam uma abaixo da outra */
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  /* Menu fica escondido e botão aparece */
+  nav#nav-menu {
+    display: none;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  /* Quando o menu estiver aberto (classe .open), mostra o menu vertical */
+  nav#nav-menu.open {
+    display: block;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 60px; /* ajuste conforme seu header */
+    left: 0;
+    width: 100%;
+  }
+
+  nav ul.navigation {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav ul.navigation li {
+    border-bottom: 1px solid #444;
+  }
+
+  nav ul.navigation li a {
+    padding: 1rem;
+    display: block;
+  }
+}

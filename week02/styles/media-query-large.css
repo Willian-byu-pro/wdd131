@@ -1,0 +1,19 @@
+
+/*o @media coloca excessoes ao longo do codigo para adaptação de acordo com o dispositivo */
+
+
+
+/*aqui diz que quando o dispositivo tiver largura de tela 500px o comando é ativo*/
+@media screen and (min-width: 500px) {
+    header{
+        background-color: black;
+        
+    }
+    h1{
+        color: aliceblue;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
