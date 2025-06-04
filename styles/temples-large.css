@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+    --primary-head:#283618;
+    --secondary-color:#606c38;
+    --text-color-principal:#fefae0;
+      
+}
+
+
+/*------ cabeçalho de navegação ------*/
+
+
+
+nav {
+    background-color: var(--primary-head);
+    margin: 0; /*Sem margens*/
+    max-width: 2000px; ;/*Expandem ao maximo para melhor parecer um cabeçalho ocupando o maximo a esquerda e direita*/
+    
+    
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;/*Esse comando diz pro navegador:
+                            “Não mostre os pontinhos (•) na frente dos itens da lista.*/
+
+    /*justify-content: center; ---->*/  /*"Center"Faz com que os "a" fiquem centralizidados(justificado ao centro) mas...*/
+
+    justify-content: space-around;/*faz com que ele se centralize ocupando uniformemente o espaço ao redor*/;
+    
+   
+}
+
+.navigation {
+		flex-direction: row;;
+	}
+
+nav a{
+    display: none;
+    color: var(--text-color-principal);
+    text-align: center;
+    padding: 2rem; /*padding é o espaço interno de um elemento, 
+                     ou seja, o "acolchoamento" entre o conteúdo 
+                     e a borda do elemento.*/
+
+    text-decoration: none; /*Esse comando diz pro navegador:
+                             Retire as linhas sublinhadas*/
+    color: var(--text-color-principal);
+}
+
+nav a:hover{/* estilo quando o usuário passa o mouse por cima do link*/
+    border: 1px solid #ffffff4a;
+
+
+}
+
+header{
+    display: flex;
+    background-color: var(--primary-head);
+    max-width: 2000px; ;/*Expandem ao maximo para melhor parecer um cabeçalho ocupando o maximo a esquerda e direita*/
+    
+}
+
+#tmenu{
+    display: block;
+    color: var(--text-color-principal);
+    text-align: center;
+    padding: 2rem; /*padding é o espaço interno de um elemento, 
+                     ou seja, o "acolchoamento" entre o conteúdo 
+                     e a borda do elemento.*/
+    font-size: 2rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa em negrito */
+}
+
+
+/*-----------------corpo----------------------*/
+
+h1{
+    color: var(--secondary-color);
+}
+
+
+
+.galery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  max-width: 2000px;
+  margin: 90px;
+
+}
+
+.galery img {
+  width: 90%;
+  height: 200px; /* ou o que você quiser */
+  object-fit: cover; /* isso evita distorção */
+  margin: 0%;
+}
+
+
+figcaption{
+    text-align: center;
+}
+
+
+
+
+
+footer{
+    background-color: var(--primary-head);
+    margin: 0; /*Sem margens*/
+    max-width: 2000px; ;/*Expandem ao maximo para melhor parecer um cabeçalho ocupando o maximo a esquerda e direita*/
+    color: var(--text-color-principal);
+    padding: 1rem; /*padding é o espaço interno de um elemento, 
+                     ou seja, o "acolchoamento" entre o conteúdo 
+                     e a borda do elemento.*/
+    text-align: center;
+    justify-content: space-around;/*faz com que ele se centralize ocupando uniformemente o espaço ao redor*/;
+    
+   
+    
+}
