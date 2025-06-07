@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan - Country Page</title>
+  <link rel="stylesheet" href="/week03/styles/place.css" />
+  <script src="/week03/script/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Japan</h1>
+  
+  </header>
+
+  <main>
+    <picture>
+      <source srcset="images/japan-800.webp" media="(min-width: 600px)">
+      <img src="images/japan-550.webp" alt=" Japan image" />
+    </picture>
+
+    <section class="data">
+      <h2>Datas</h2>
+      <ul>
+        <li><strong>Capital:</strong> Tóquio</li>
+        <li><strong>Population:</strong> 125 million</li>
+        <li><strong>Ianguages:</strong> Japonese</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <div class="icon-mobile">
+        <img src="/week03/images/cloudy.svg" alt="cloudy weather icon" />
+      </div>
+      <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
+      <p><strong>Wind:</strong> <span id="wind">6</span> km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="windChill">Calculate...</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="copy">&copy;2025 | Willian Ramos | Brazil 
+            <span id="currentyear"></span>
+        </p>
+        <p id="LastModified"></p>
+  </footer>
+</body>
+</html>
