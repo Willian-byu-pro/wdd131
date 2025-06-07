@@ -1,7 +1,7 @@
 :root {
   --primary-color: #dc143c;
   --secondary-color: #ffffff;
-  --font-family: 'Open Sans';
+  --font-family: 'Open Sans', sans-serif;
 }
 
 body {
