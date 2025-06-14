@@ -112,23 +112,26 @@ createTempleCard();
 function createTempleCard() {
   temples.forEach(temple => {
     let card = document.createElement("section");
-    card.classList.add("temple"); // classe comum a todos os templos
+    card.classList.add("temple"); // Classe base
 
-    // Verifica o ano de dedicação
+    // Filtro por ano
     const year = parseInt(temple.dedicated.split(",")[0]);
-    if (year < 2000) {
+    if (year < 1900) {
       card.classList.add("old");
-    } else {
+    }
+    if (year > 2000) {
       card.classList.add("new");
     }
 
-    // Verifica o tamanho (você pode ajustar os critérios)
+    // Filtro por área
     if (temple.area > 90000) {
       card.classList.add("large");
-    } else {
+    }
+    if (temple.area < 10000) {
       card.classList.add("small");
     }
 
+    // Conteúdo do cartão
     let name = document.createElement("h2");
     let location = document.createElement("p");
     let dedication = document.createElement("p");
@@ -151,11 +154,7 @@ function createTempleCard() {
 
     document.querySelector(".grid").appendChild(card);
   });
-
-
-
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".navigation a");
@@ -163,12 +162,13 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
-
       const filter = e.target.dataset.filter;
       const cards = document.querySelectorAll(".temple");
 
       cards.forEach(card => {
-        if (filter === "Home" || card.classList.contains(filter)) {
+        if (filter === "all") {
+          card.style.display = "block";
+        } else if (card.classList.contains(filter)) {
           card.style.display = "block";
         } else {
           card.style.display = "none";
