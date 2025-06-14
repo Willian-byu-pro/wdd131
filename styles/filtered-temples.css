@@ -55,13 +55,21 @@
 
 /* large view navigation ************************************/
 @media (max-width: 600px) {
-.galery {
+
+header {
+  display: flex;
+  flex-direction: column; /* <-- ESSENCIAL */
+  background-color: var(--primary-head);
+  max-width: 2000px;
+}
+
+div {
   display: block !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.galery img {
+.div img {
   width: 100% !important;
   height: auto !important;
   margin: 5px !important;
@@ -105,23 +113,21 @@ main h1 {
 	}
 
     main{
-        display: grid;
+        display: flex;
     }
 }
 
 
 /* Menu hambúrguer padrão - escondido links */
+
 .navigation {
-  display: none; /* esconde o menu por padrão no mobile */
-  flex-direction: column; /* deixa em coluna */
+  display: none;
+  flex-direction: column;
   background-color: var(--primary-head);
-  position: absolute; /* para sobrepor ao conteúdo */
-  top: 60px; /* ajusta a posição abaixo do header */
-  right: 1rem;
-  width: 200px; /* largura do menu no mobile */
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: none;
+  position: static; /* <- isso mantém no fluxo do header */
 }
 
 /* Quando a classe .open estiver ativa, mostra o menu */
