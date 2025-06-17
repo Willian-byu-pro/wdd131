@@ -1,0 +1,34 @@
+body {
+  font-family: 'Roboto', sans-serif ;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+
+
+h1{
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color:#2E7D32 ;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+footer{
+  text-align: center;
+  color: #424242;
+}
