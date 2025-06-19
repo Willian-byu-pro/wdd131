@@ -15,10 +15,7 @@ body {
   padding: 20px;
 }
 
-.required {
-  color: red;
-  margin-left: 0.2em;
-}
+
 
 header, footer {
   text-align: center;
@@ -99,4 +96,10 @@ input[type="submit"]:hover {
   main {
     padding: 15px;
   }
+}
+
+
+.required {
+  color: red;
+  margin-left: 0.2em;
 }
