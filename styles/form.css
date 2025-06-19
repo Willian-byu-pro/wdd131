@@ -21,7 +21,7 @@ header, footer {
   text-align: center;
   padding: 1em;
   background-color: #4A90E2;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -74,7 +74,7 @@ input[type="submit"] {
   display: block;
   width: 100%;
   background-color: #4A90E2;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 15px;
   margin-top: 20px;
@@ -100,6 +100,6 @@ input[type="submit"]:hover {
 
 
 .required {
-  color: red;
+  color: #357ABD;
   margin-left: 0.2em;
 }
