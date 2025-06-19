@@ -15,9 +15,9 @@
   </header>
 
   <main>
-    <form method="get" action="review.html">
+    <form method="get" action="/review.htm">
       <!-- Product Name -->
-      <label for="productName">Product Name:</label>
+      <label for="productName">Product Name <span class="required">*</span></label>
       <select id="productName" name="productName" required>
         <option value="" disabled selected>Select a Product ...</option>
         <!-- Options populated by JavaScript -->
@@ -34,27 +34,28 @@
       </fieldset>
 
       <!-- Date of Installation -->
-      <label for="installDate">Date of Installation:</label>
+      <label for="installDate">Date of Installation <span class="required">*</span></label>
       <input type="date" id="installDate" name="installDate" required>
 
       <!-- Useful Features -->
       <fieldset>
-        <legend>Useful Features:</legend>
-        <label><input type="checkbox" id="feature1" name="features" value="Speed"> Speed</label>
-        <label><input type="checkbox" id="feature2" name="features" value="Efficiency"> Efficiency</label>
-        <label><input type="checkbox" id="feature3" name="features" value="Design"> Design</label>
+        <legend>Useful Features <span class="required">*</span></legend>
+        <label><input type="checkbox" id="feature1" name="features" value="Speed" > Speed</label>
+        <label><input type="checkbox" id="feature2" name="features" value="Efficiency" > Efficiency</label>
+        <label><input type="checkbox" id="feature3" name="features" value="Design" > Design</label>
+        <label><input type="checkbox" id="feature3" name="features" value="Resistant" > Resistant</label>
       </fieldset>
 
       <!-- Written Review -->
-      <label for="writtenReview">Written Review:</label>
+      <label for="writtenReview">Written Review </label>
       <textarea id="writtenReview" name="writtenReview"></textarea>
 
       <!-- User Name -->
-      <label for="userName">Your Name:</label>
-      <input type="text" id="userName" name="userName">
+      <label for="userName">Your Name <span class="required">*</span></label>
+      <input type="text" id="userName" name="userName" required>
 
       <!-- Submit Button -->
-      <input type="submit" value="Submit Review">
+      <input type="submit" value="Submit">
     </form>
   </main>
 
