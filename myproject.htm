@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance in Focuse</title>
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Willian Ramos |This site outlines the goals, structure, and visual elements of the 'Finanças em Foco' project — a personal finance and investment website focused on financial education, beginner-friendly tools, and practical content."/>
+  <meta name="author" content="Willian Ramos"/>
+  <link rel="stylesheet" href="styles/myproject.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/myproject.js" defer></script>
+</head>
+<body>
+ <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.6); box-shadow: 0 2px 5px rgba(0,0,0,0.7); flex-wrap: wrap;">
+  <h1 style="font-size: 2.5rem; letter-spacing: 1.5px; color: #fff; margin: 0;">Finance in Focus</h1>
+  <div id="usdQuoteHeader" style="color: #ffa; font-weight: bold; font-size: 1.1rem; min-width: 150px; text-align: right;">
+    USD Quote: <span id="usdRateHeader">Loading...</span>
+  </div>
+ </header>
+
+  <main>
+    <picture>
+      <source srcset="/images/president.webp" media="(min-width: 600px)">
+      <img src="/images/finance.jpeg" alt=" Brazil Real" loading="lazy" ... />
+      <p id="basef">
+        Gabriel Galípolo is the current President of the Central Bank of Brazil, appointed in 2025 after serving as Director of Monetary Policy. An economist with a degree from PUC-SP, Galípolo brings experience from both the public and private sectors. Known for his balanced approach, he supports Central Bank autonomy while promoting economic growth through innovation, infrastructure, and financial stability.
+      </p>
+    </picture>
+
+   <section class="chart-container">
+     <canvas id="stockChart"></canvas>
+   </section>
+
+    <section class="tip">
+      <h2>Tip Of The Month</h2>
+     <ul id="financialTipsList"></ul>
+    </section>
+
+    <section class="weather">
+      <h2>Stay tuned</h2>
+
+      <div>
+        <p>
+            June Financial Insights: What Investors Should Know Right Now
+As we head into the final weeks of June, the financial landscape in Brazil—and globally—is showing both opportunities and red flags. Whether you're a beginner or a seasoned investor, understanding the current trends can help you make better decisions this month.
+
+🔥 Key Highlights for June 2025
+1. Selic Rate Holds at 10.50%
+The Central Bank has maintained the Selic rate at 10.50%. While this may limit aggressive economic growth, it creates solid ground for fixed-income investors. High-yield savings accounts, CDBs, and Tesouro Direto remain attractive this month.
+
+2. Ibovespa Shows Positive Momentum
+The Brazilian stock index, Ibovespa, has been showing signs of recovery. This week, it flirted with the 130,000-point mark, thanks to strong performances from blue-chip stocks like Petrobras and Itaú Unibanco.
+
+3. Dividend Stocks Are Still King
+With dividend yields reaching 8.5% in companies like Petrobras, dividend investing continues to be a smart move for those looking for passive income. Keep an eye on payout ratios and long-term fundamentals.
+
+💡 Smart Moves for This Month
+Diversify: With market uncertainty still in play, mix your portfolio between fixed income and variable income.
+
+Watch Inflation Data: June inflation numbers will influence Central Bank decisions in the second semester.
+
+Consider Dollar Exposure: If the BRL weakens, assets tied to the USD (like international ETFs) may perform better.
+
+🔍 Our Take
+June 2025 is shaping up to be a transitional month. While there's no clear bull or bear trend, the signals are leaning cautiously optimistic. Staying informed and adaptable is your best financial asset.
+        </p>
+      </div>
+    </section>
+
+    <section class="form-section">
+  <h2>Give Us Your Suggestion</h2>
+  <form id="suggestionForm">
+    <label for="name">Name (optional):</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="suggestion">Suggestion<span style="color: red;">*</span>:</label>
+    <textarea id="suggestion" name="suggestion" rows="4" placeholder="What would you like to see here?" required></textarea>
+
+    <button type="submit">Send</button>
+    <p id="formResponse" style="margin-top: 0.5rem; color: #90ee90;"></p>
+  </form>
+</section>
+  </main>
+
+  <footer>
+    <p class="copy">&copy;2025 | Willian Ramos | Brazil 
+            <span id="currentyear"></span>
+        </p>
+        <p id="LastModified"></p>
+  </footer>
+</body>
+</html>

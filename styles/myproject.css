@@ -1,0 +1,234 @@
+ /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: url('/images/finances.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+    }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  grid-template-rows: auto auto;         /* 2 linhas */
+  gap: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+}
+
+
+/* Cada section já tem estilo de card com fundo e borda arredondada */
+/* Só ajusta pra garantir padding e sombra */
+
+/* Distribui as sections nas células da grid */
+section:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+section:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+section:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+section:nth-child(4) {
+  grid-column: 1 / span 3;  /* ocupa as 3 colunas da linha 2 */
+  grid-row: 2;
+}
+
+
+/* Cards estilo */
+section {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 700px; /* ou o que fizer sentido pra vc */
+  height: 400px; /* altura fixa confortável */
+  margin: 0 auto; /* centraliza */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#basef{
+    font-size:10px ;
+    padding: 15px;
+}
+
+.form-section {
+  grid-column: 1 / span 3;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #ccc;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  background-color: #dc143c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #b01030;
+}
+
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #dc143c;
+      padding-bottom: 0.5rem;
+      color: #dc143c;
+    }
+
+    /* Chart container */
+    .chart-container {
+      max-width: 100%;
+      height: 320px;
+    }
+
+    /* Dados */
+    .tip ul {
+      list-style: none;
+    }
+
+    .tip li {
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .tip strong {
+      color: #ffa500;
+    }
+
+    /* Artigo (weather) */
+    .weather p {
+      line-height: 1.6;
+      font-size: 1rem;
+      white-space: pre-line;
+      color: #eee;
+    }
+
+    /* Footer */
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Imagem com lazy loading */
+    picture img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      filter: brightness(0.85);
+      transition: filter 0.3s ease-in-out;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    picture img:hover {
+      filter: brightness(1);
+    }
+
+    /* Responsividade */
+/* Responsividade: empilha tudo no mobile */
+@media (max-width: 767px) {
+
+    header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main {
+    display: block;
+    margin: 1rem;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: none;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+    
+    
+.chart-container {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
